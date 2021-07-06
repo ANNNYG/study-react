@@ -1,0 +1,22 @@
+.loginPage {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.loginP {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.LoginBtn {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+}
