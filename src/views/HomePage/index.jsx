@@ -1,19 +1,21 @@
 import React from 'react'
 import './index.css'
 
-import { Switch, Route, Redirect } from "react-router-dom"
+import { Switch, Route, Redirect, useHistory } from "react-router-dom"
 import { Menu } from 'antd'; //组件库引入导航栏
 
 //引入自定义组件
 import HomeLeft from '../Home/index'
+import SonHome from '../SonHome/index'
+
+
 
 const { SubMenu } = Menu;
 const rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
 
 
-
-
 export default function HomePage() {
+    const history = useHistory()
     const [openKeys, setOpenKeys] = React.useState(['sub1']);
     //导航栏改变
     const onOpenChange = keys => {
@@ -27,6 +29,7 @@ export default function HomePage() {
     };
     const handeClick = (event) => {
         console.log(event)
+        history.push('/home/' + event.key)
     }
     return (
         <div className='HomeOutside'>
@@ -37,8 +40,8 @@ export default function HomePage() {
                     onClick={handeClick}
                 >
                     <SubMenu key="sub1" title="Navigation One">
-                        <Menu.Item key="1">Option 1</Menu.Item>
-                        <Menu.Item key="2">Option 2</Menu.Item>
+                        <Menu.Item key="home">主页</Menu.Item>
+                        <Menu.Item key="SonHome">简介</Menu.Item>
                         <Menu.Item key="3">Option 3</Menu.Item>
                         <Menu.Item key="4">Option 4</Menu.Item>
                     </SubMenu>
@@ -57,11 +60,15 @@ export default function HomePage() {
                         <Menu.Item key="12">Option 12</Menu.Item>
                     </SubMenu>
                 </Menu>
+
             </div>
             <div className='leftBox'>
                 <Switch>
-                    <Route exact path='/home/'>
+                    <Route exact path='/home/home'>
                         <HomeLeft></HomeLeft>
+                    </Route>
+                    <Route exact path='/home/SonHome'>
+                        <SonHome></SonHome>
                     </Route>
                 </Switch>
             </div>

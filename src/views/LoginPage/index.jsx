@@ -8,7 +8,7 @@ export default function LoginPage(props) {
     const history = useHistory()
     const handeClick = () => {
         console.log(1)
-        history.push('/home')
+        history.push('/home/home')
     }
     return (
         <div className='loginPage'>
