@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'antd';//引入组件库
-import { Route, useHistory } from 'react-router-dom' //使用useHistory改变路由
+import { useHistory } from 'react-router-dom' //使用useHistory改变路由
 
 import './index.css' //引入样式文件
 

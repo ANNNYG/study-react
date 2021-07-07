@@ -7,6 +7,7 @@ import { Menu } from 'antd'; //组件库引入导航栏
 //引入自定义组件
 import HomeLeft from '../Home/index'
 import SonHome from '../SonHome/index'
+import Communication from '../Communication/index'
 
 
 
@@ -42,7 +43,7 @@ export default function HomePage() {
                     <SubMenu key="sub1" title="Navigation One">
                         <Menu.Item key="home">主页</Menu.Item>
                         <Menu.Item key="SonHome">简介</Menu.Item>
-                        <Menu.Item key="3">Option 3</Menu.Item>
+                        <Menu.Item key="Communication">组件间通信</Menu.Item>
                         <Menu.Item key="4">Option 4</Menu.Item>
                     </SubMenu>
                     <SubMenu key="sub2" title="Navigation Two">
@@ -69,6 +70,9 @@ export default function HomePage() {
                     </Route>
                     <Route exact path='/home/SonHome'>
                         <SonHome></SonHome>
+                    </Route>
+                    <Route exact path='/home/Communication'>
+                        <Communication></Communication>
                     </Route>
                 </Switch>
             </div>
