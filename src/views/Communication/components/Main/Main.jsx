@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './index.css'
 import { Checkbox } from 'antd';
 import ShowEvent from '../ShowEvent/ShowEvent'
@@ -8,9 +8,26 @@ export default function Main(props) {
     const [indeterminate, setIndeterminate] = React.useState(true);
     //是否全选state
     const [checkAll, setCheckAll] = React.useState(false);
+    //item是否被选中
+    const [checkedList, setCheckedList] = React.useState([]);
     /* 点击全选 */
-    const onCheckAllChange = () => {
-
+    useEffect(() => {
+        setIndeterminate(!!checkedList.length && checkedList.length < props.list.length);
+        setCheckAll(checkedList.length === props.list.length);
+    })
+    const onCheckAllChange = (e) => {
+        setCheckedList(e.target.checked ? props.list : []);
+        setIndeterminate(false);
+        setCheckAll(e.target.checked);
+    }
+    const handleCheckItem = (event, value) => {
+        let arr = checkedList
+        event[0]
+            ? arr = [...arr, ...event]
+            : arr = arr.filter((item) => item != value)
+        setCheckedList(arr)
+        setIndeterminate(!!arr.length && arr.length < props.list.length);
+        setCheckAll(arr.length === props.list.length);
     }
     return (
         <div>
@@ -22,7 +39,9 @@ export default function Main(props) {
             {props.list.map((item, index) =>
                 <ShowEvent
                     key={index}
-                    item={item}
+                    item={{ item, index }}
+                    handleCheckItem={handleCheckItem}
+                    value={checkedList}
                 />)}
         </div>
     )
