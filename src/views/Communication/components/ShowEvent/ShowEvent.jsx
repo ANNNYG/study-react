@@ -7,11 +7,11 @@ import './index.css'
 const CheckboxGroup = Checkbox.Group;
 
 export default function ShowEvent(props) {
+    
     const plainOptions = [{ label: '', value: props.item.item }]
 
     const onChange = (list) => {
-        console.log(list)
-        props.handleCheckItem(list,props.item.item)
+        props.handleCheckItem(list, props.item.item)
     }
 
     return (

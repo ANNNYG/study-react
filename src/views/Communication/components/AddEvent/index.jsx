@@ -10,10 +10,8 @@ export default function AddEvent(props) {
     //输入框绑定
     const handeInput = (e) => {
         setInp(e.target.value)
-        console.log(inp)
     }
     const handeAdd = () => {
-        console.log(inp)
         props.addItems(inp)
         setInp('')
     }
