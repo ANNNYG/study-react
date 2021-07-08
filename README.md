@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+该项目为自己记录所学知识点，以防长时间不用导致遗忘
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
