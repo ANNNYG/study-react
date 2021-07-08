@@ -1,0 +1,7 @@
+.checkAllBox {
+    height: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}

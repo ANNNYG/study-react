@@ -1,0 +1,16 @@
+.chactOutside {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chactP {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.content {
+    width: 400px;
+}
