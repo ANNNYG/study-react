@@ -1,5 +1,5 @@
 import React from 'react'
-import index from './index.module.css'
+import index from './index.module.css'  /* 避免污染全局 */
 import { Button } from 'antd'
 import store from '@/store/store'
 
