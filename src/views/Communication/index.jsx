@@ -11,13 +11,24 @@ export default function Index() {
     const addItems = (item) => {
         setList([...list, item])
     }
-
+    /* 删除某一项 */
+    const removeSomeone = (value) => {
+        setList(() => list.filter(v => v != value))
+    }
+    /* 删除选中 */
+    const removeChecked = (arr) => {
+        setList(() => list.filter(v => arr.indexOf(v) == -1))
+    }
     return (
         <div className='chactOutside'>
             <div className='content'>
                 <p className='chactP'>组件间通信</p>
                 <AddEvent addItems={addItems} />
-                <Main list={list} />
+                <Main
+                    removeSomeone={removeSomeone}
+                    list={list}
+                    removeChecked={removeChecked}
+                />
             </div>
         </div>
     )

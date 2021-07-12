@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './index.css'
-import { Checkbox } from 'antd';
+import { Checkbox, Button } from 'antd';
 import ShowEvent from '../ShowEvent/ShowEvent'
 
 
@@ -35,12 +35,22 @@ export default function Main(props) {
             ? setCheckedList(() => [...checkedList, ...event])
             : setCheckedList(() => checkedList.filter(item => item != value))
     }
+    /* 删除某一项 */
+    const delSomeOne = (value) => {
+        props.removeSomeone(value)
+    }
+    /* 删除选中 */
+    const delChecked = () => {
+        props.removeChecked(checkedList)
+        setCheckedList([])
+    }
     return (
         <div>
             <div className='checkAllBox'>
                 <Checkbox indeterminate={indeterminate} onChange={onCheckAllChange} checked={checkAll}>
                     全选
                 </Checkbox>
+                <Button type="primary" danger onClick={delChecked}> 删除选中</Button>
             </div>
             {props.list.map((item, index) =>
                 <ShowEvent
@@ -48,6 +58,7 @@ export default function Main(props) {
                     item={{ item, index }}
                     handleCheckItem={handleCheckItem}
                     value={checkedList}
+                    delSomeOne={delSomeOne}
                 />)}
         </div>
     )
