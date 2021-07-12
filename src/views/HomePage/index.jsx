@@ -8,6 +8,7 @@ import { Menu } from 'antd'; //组件库引入导航栏
 import HomeLeft from '../Home/index'
 import SonHome from '../SonHome/index'
 import Communication from '../Communication/index'
+import EasyRedux from '@/views/easyRedux/index'
 
 
 
@@ -44,7 +45,7 @@ export default function HomePage() {
                         <Menu.Item key="home">主页</Menu.Item>
                         <Menu.Item key="SonHome">简介</Menu.Item>
                         <Menu.Item key="Communication">组件间通信</Menu.Item>
-                        <Menu.Item key="4">Option 4</Menu.Item>
+                        <Menu.Item key="EasyRedux">简单实用redux</Menu.Item>
                     </SubMenu>
                     <SubMenu key="sub2" title="Navigation Two">
                         <Menu.Item key="5">Option 5</Menu.Item>
@@ -73,6 +74,9 @@ export default function HomePage() {
                     </Route>
                     <Route exact path='/home/Communication'>
                         <Communication></Communication>
+                    </Route>
+                    <Route exact path='/home/EasyRedux'>
+                        <EasyRedux></EasyRedux>
                     </Route>
                 </Switch>
             </div>
