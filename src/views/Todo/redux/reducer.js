@@ -10,7 +10,6 @@ export default (state = dataSource, action) => {
         case 'Delete_event':
             return { ...state, list: state.list.filter(v => v.name != action.obj.name) }
         case 'Delete_MoreEvent':
-            let obj = []
             return {
                 ...state,
                 checkedList: [],

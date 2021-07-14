@@ -6,6 +6,7 @@ import { setChecked, Delete_event } from '../../redux/action'
 
 let TodoMain = (props) => {
     const [selectionType, setSelectionType] = useState('checkbox');
+    //选择框回调
     const rowSelection = {
         onChange: (selectedRowKeys, selectedRows) => {
             console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
@@ -43,7 +44,6 @@ let TodoMain = (props) => {
 
     ]
     const handleDalete = (e, record) => {
-        console.log(e, record)
         setSelectionType(false)
         props.dispatch(Delete_event(record))
     }
