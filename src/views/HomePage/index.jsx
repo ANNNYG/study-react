@@ -9,7 +9,7 @@ import HomeLeft from '../Home/index'
 import SonHome from '../SonHome/index'
 import Communication from '../Communication/index'
 import EasyRedux from '@/views/easyRedux/index'
-
+import Todo from '@/views/Todo/index'
 
 
 const { SubMenu } = Menu;
@@ -41,21 +41,21 @@ export default function HomePage() {
                     onOpenChange={onOpenChange}
                     onClick={handeClick}
                 >
-                    <SubMenu key="sub1" title="Navigation One">
+                    <SubMenu key="sub1" title="初级内容">
                         <Menu.Item key="home">主页</Menu.Item>
                         <Menu.Item key="SonHome">简介</Menu.Item>
                         <Menu.Item key="Communication">组件间通信</Menu.Item>
                         <Menu.Item key="EasyRedux">简单实用redux</Menu.Item>
                     </SubMenu>
-                    <SubMenu key="sub2" title="Navigation Two">
-                        <Menu.Item key="5">Option 5</Menu.Item>
+                    <SubMenu key="sub2" title="中级内容">
+                        <Menu.Item key="Todo">组件通信使用redux</Menu.Item>
                         <Menu.Item key="6">Option 6</Menu.Item>
                         <SubMenu key="sub3" title="Submenu">
                             <Menu.Item key="7">Option 7</Menu.Item>
                             <Menu.Item key="8">Option 8</Menu.Item>
                         </SubMenu>
                     </SubMenu>
-                    <SubMenu key="sub4" title="Navigation Three">
+                    <SubMenu key="sub4" title="高级内容">
                         <Menu.Item key="9">Option 9</Menu.Item>
                         <Menu.Item key="10">Option 10</Menu.Item>
                         <Menu.Item key="11">Option 11</Menu.Item>
@@ -77,6 +77,9 @@ export default function HomePage() {
                     </Route>
                     <Route exact path='/home/EasyRedux'>
                         <EasyRedux></EasyRedux>
+                    </Route>
+                    <Route exact path='/home/Todo'>
+                        <Todo></Todo>
                     </Route>
                 </Switch>
             </div>

@@ -45,6 +45,7 @@ let EasyRedux = (props) => {
     )
 }
 //关联习惯列表的props与state，不关联的话全局的state.customList就没法作为props属性传进来
+//EasyReduxStatetoProps容器组件
 const EasyReduxStatetoProps = (state) => {
     return {
         easyRedux: state.easyRedux

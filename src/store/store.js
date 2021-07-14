@@ -7,6 +7,7 @@ import {
 import thunk from 'redux-thunk'
 
 import easyRedux from '@/views/easyRedux/slice.js'
+import todo from '@/views/Todo/redux/reducer.js'
 
 //将所有的reducers封装到一个对象中
 const allReducers = {
@@ -15,6 +16,7 @@ const allReducers = {
         相当于customListReducer就只在乎customList这个字段就行了 
     */
     easyRedux,
+    todo,
 }
 /* 
 使用redux包中提供的combineReducers函数，来鉴别reducer  
