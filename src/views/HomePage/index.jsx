@@ -45,7 +45,7 @@ export default function HomePage() {
                         <Menu.Item key="home">主页</Menu.Item>
                         <Menu.Item key="SonHome">简介</Menu.Item>
                         <Menu.Item key="Communication">组件间通信</Menu.Item>
-                        <Menu.Item key="EasyRedux">简单实用redux</Menu.Item>
+                        <Menu.Item key="EasyRedux">简单使用redux</Menu.Item>
                     </SubMenu>
                     <SubMenu key="sub2" title="中级内容">
                         <Menu.Item key="Todo">组件通信使用redux</Menu.Item>
