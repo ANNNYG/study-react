@@ -1,3 +1,10 @@
+/*
+ *@description: 
+ *@author: PortKas 
+ *@date: 2021-07-21 15:40:21
+ *remark: 路由导航页
+*/
+
 import React from 'react'
 import './index.css'
 
@@ -10,6 +17,7 @@ import SonHome from '../SonHome/index'
 import Communication from '../Communication/index'
 import EasyRedux from '@/views/easyRedux/index'
 import Todo from '@/views/Todo/index'
+import Hoc from '@/views/Hoc/index'
 
 
 const { SubMenu } = Menu;
@@ -49,7 +57,7 @@ export default function HomePage() {
                     </SubMenu>
                     <SubMenu key="sub2" title="中级内容">
                         <Menu.Item key="Todo">组件通信使用redux</Menu.Item>
-                        <Menu.Item key="6">Option 6</Menu.Item>
+                        <Menu.Item key="HOC">高阶组件</Menu.Item>
                         <SubMenu key="sub3" title="Submenu">
                             <Menu.Item key="7">Option 7</Menu.Item>
                             <Menu.Item key="8">Option 8</Menu.Item>
@@ -80,6 +88,9 @@ export default function HomePage() {
                     </Route>
                     <Route exact path='/home/Todo'>
                         <Todo></Todo>
+                    </Route>
+                    <Route exact path='/home/Hoc'>
+                        <Hoc></Hoc>
                     </Route>
                 </Switch>
             </div>
