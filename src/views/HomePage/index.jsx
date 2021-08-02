@@ -18,6 +18,7 @@ import Communication from '../Communication/index'
 import EasyRedux from '@/views/easyRedux/index'
 import Todo from '@/views/Todo/index'
 import Hoc from '@/views/Hoc/index'
+import CustomizeHook from '@/views/customizeHook/index'
 
 
 const { SubMenu } = Menu;
@@ -58,10 +59,8 @@ export default function HomePage() {
                     <SubMenu key="sub2" title="中级内容">
                         <Menu.Item key="Todo">组件通信使用redux</Menu.Item>
                         <Menu.Item key="HOC">高阶组件</Menu.Item>
-                        <SubMenu key="sub3" title="Submenu">
-                            <Menu.Item key="7">Option 7</Menu.Item>
-                            <Menu.Item key="8">Option 8</Menu.Item>
-                        </SubMenu>
+                        <Menu.Item key="CustomizeHook">自定义Hook</Menu.Item>
+
                     </SubMenu>
                     <SubMenu key="sub4" title="高级内容">
                         <Menu.Item key="9">Option 9</Menu.Item>
@@ -91,6 +90,9 @@ export default function HomePage() {
                     </Route>
                     <Route exact path='/home/Hoc'>
                         <Hoc></Hoc>
+                    </Route>
+                    <Route exact path='/home/CustomizeHook'>
+                        <CustomizeHook></CustomizeHook>
                     </Route>
                 </Switch>
             </div>
