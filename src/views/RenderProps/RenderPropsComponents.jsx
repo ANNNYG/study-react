@@ -10,13 +10,15 @@ export default class RenderPropsComponents extends Component {
             x: e.clientX,
             y: e.clientY
         })
-       /*  e.stopPropagation() */
-        e.nativeEvent.stopImmediatePropagation();
+         e.stopPropagation()
+      /*   e.nativeEvent.stopImmediatePropagation(); */
     }
     render() {
         return (
             <div style={{
-                height: '100vh',
+                height: '50vh',
+                width: '800px',
+                backgroundColor: 'rgb(255,255,255)'
             }}
                 onMouseMove={this.handleMouseMove}
             >
