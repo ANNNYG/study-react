@@ -20,6 +20,7 @@ import Todo from '@/views/Todo/index'
 import Hoc from '@/views/Hoc/index'
 import CustomizeHook from '@/views/customizeHook/index'
 import Count from '@/views/Count/index'
+import RenderProps from '@/views/RenderProps/index'
 
 
 
@@ -63,6 +64,7 @@ export default function HomePage() {
                         <Menu.Item key="HOC">高阶组件</Menu.Item>
                         <Menu.Item key="CustomizeHook">自定义Hook</Menu.Item>
                         <Menu.Item key="Count">自定义Hook求和组件</Menu.Item>
+                        <Menu.Item key="RenderProps">RenderProps</Menu.Item>
 
                     </SubMenu>
                     <SubMenu key="sub4" title="高级内容">
@@ -99,6 +101,9 @@ export default function HomePage() {
                     </Route>
                     <Route exact path='/home/Count'>
                         <Count></Count>
+                    </Route>
+                    <Route exact path='/home/RenderProps'>
+                        <RenderProps></RenderProps>
                     </Route>
                 </Switch>
             </div>
