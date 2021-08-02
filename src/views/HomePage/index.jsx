@@ -8,7 +8,7 @@
 import React from 'react'
 import './index.css'
 
-import { Switch, Route, Redirect, useHistory } from "react-router-dom"
+import { Switch, Route, useHistory } from "react-router-dom"
 import { Menu } from 'antd'; //组件库引入导航栏
 
 //引入自定义组件
@@ -19,6 +19,8 @@ import EasyRedux from '@/views/easyRedux/index'
 import Todo from '@/views/Todo/index'
 import Hoc from '@/views/Hoc/index'
 import CustomizeHook from '@/views/customizeHook/index'
+import Count from '@/views/Count/index'
+
 
 
 const { SubMenu } = Menu;
@@ -60,6 +62,7 @@ export default function HomePage() {
                         <Menu.Item key="Todo">组件通信使用redux</Menu.Item>
                         <Menu.Item key="HOC">高阶组件</Menu.Item>
                         <Menu.Item key="CustomizeHook">自定义Hook</Menu.Item>
+                        <Menu.Item key="Count">自定义Hook求和组件</Menu.Item>
 
                     </SubMenu>
                     <SubMenu key="sub4" title="高级内容">
@@ -93,6 +96,9 @@ export default function HomePage() {
                     </Route>
                     <Route exact path='/home/CustomizeHook'>
                         <CustomizeHook></CustomizeHook>
+                    </Route>
+                    <Route exact path='/home/Count'>
+                        <Count></Count>
                     </Route>
                 </Switch>
             </div>
